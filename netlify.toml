@@ -1,0 +1,89 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/pgrs"
+  to = "/pgrs.html"
+  status = 200
+
+[[redirects]]
+  from = "/sobre"
+  to = "/sobre.html"
+  status = 200
+
+[[redirects]]
+  from = "/contato"
+  to = "/contato.html"
+  status = 200
+
+[[redirects]]
+  from = "/ecosystem"
+  to = "/vendas.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ecosystem/"
+  to = "/vendas.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/alias"
+  to = "/vendas.html"
+  status = 200
+
+[[redirects]]
+  from = "/alias/suporte"
+  to = "/alias-suporte.html"
+  status = 200
+
+[[redirects]]
+  from = "/alias/termos"
+  to = "/alias-termos.html"
+  status = 200
+
+[[redirects]]
+  from = "/alias/privacidade"
+  to = "/alias-privacidade.html"
+  status = 200
+
+[[redirects]]
+  from = "/ecosystem/suporte"
+  to = "/alias-suporte.html"
+  status = 200
+
+[[redirects]]
+  from = "/ecosystem/termos"
+  to = "/alias-termos.html"
+  status = 200
+
+[[redirects]]
+  from = "/ecosystem/privacidade"
+  to = "/alias-privacidade.html"
+  status = 200
+
+[[redirects]]
+  from = "/pmoc/*"
+  to = "https://engenheiro-producao-ai.onrender.com/pmoc/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/artigos/*"
+  to = "https://engenheiro-producao-ai.onrender.com/api/seo/page/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "https://engenheiro-producao-ai.onrender.com/api/seo/sitemap.xml"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
