@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoSystem AEC + Regulatory — Ativação | Global Match Engenharia</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/webp" href="../assets/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue: #1e40af;
+    --blue-light: #3b82f6;
+    --green: #16a34a;
+    --green-light: #22c55e;
+    --red: #dc2626;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-900: #111827;
+    --radius: 12px;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--gray-50);
+    color: var(--gray-900);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background: #fff;
+    border-bottom: 1px solid var(--gray-200);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  header img { height: 36px; }
+  header .brand { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--blue); }
+  header .sub-brand { font-size: 0.8rem; color: var(--gray-600); }
+
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 24px rgba(0,0,0,.08);
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .card-header {
+    padding: 32px 36px 24px;
+    border-bottom: 1px solid var(--gray-100);
+    text-align: center;
+  }
+
+  .status-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+
+  .status-icon.success { background: #dcfce7; }
+  .status-icon.error   { background: #fee2e2; }
+  .status-icon.loading { background: #dbeafe; animation: pulse 1.5s ease-in-out infinite; }
+
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
+
+  .card-header h1 { font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+  .card-header p  { color: var(--gray-600); font-size: 0.95rem; line-height: 1.6; }
+
+  .card-body { padding: 28px 36px; }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .info-item {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .info-item .label { font-size: 0.75rem; font-weight: 600; color: var(--gray-600); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+  .info-item .value { font-size: 0.95rem; font-weight: 600; color: var(--gray-900); word-break: break-all; }
+
+  .access-section { margin-bottom: 24px; }
+  .access-section h2 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--gray-700); }
+
+  .api-url {
+    background: var(--gray-900);
+    color: #a5f3fc;
+    font-family: monospace;
+    font-size: 0.85rem;
+    padding: 14px 16px;
+    border-radius: 8px;
+    word-break: break-all;
+    margin-bottom: 8px;
+  }
+
+  .steps { list-style: none; }
+  .steps li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    line-height: 1.5;
+  }
+  .steps li:last-child { border-bottom: none; }
+  .steps .num {
+    min-width: 24px;
+    height: 24px;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 1px;
+  }
+
+  .actions { display: flex; flex-direction: column; gap: 10px; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity .15s;
+  }
+  .btn:hover { opacity: .88; }
+  .btn-primary { background: var(--blue); color: #fff; }
+  .btn-whatsapp { background: #25d366; color: #fff; }
+  .btn-outline { background: #fff; color: var(--gray-700); border: 1.5px solid var(--gray-200); }
+
+  .hidden { display: none; }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: var(--gray-600);
+    border-top: 1px solid var(--gray-200);
+    background: #fff;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="../assets/logo.webp" alt="Global Match Engenharia" onerror="this.style.display='none'">
+  <div>
+    <div class="brand">Global Match Engenharia</div>
+    <div class="sub-brand">EcoSystem AEC + Regulatory</div>
+  </div>
+</header>
+
+<main>
+  <!-- SUCCESS STATE -->
+  <div class="card" id="card-success" class="hidden">
+    <div class="card-header">
+      <div class="status-icon success">✅</div>
+      <h1>Assinatura Ativada!</h1>
+      <p>Seus agentes de IA estão prontos. Confira as instruções de acesso abaixo.</p>
+    </div>
+    <div class="card-body">
+      <div class="info-grid" id="info-grid"></div>
+
+      <div class="access-section">
+        <h2>Acesso à API dos Agentes</h2>
+        <div class="api-url">https://engenheiro-producao-ai.onrender.com</div>
+        <ul class="steps">
+          <li>
+            <span class="num">1</span>
+            <span>Acesse o catálogo de agentes: <strong>/api/agents/list</strong> para ver os 71 agentes disponíveis no seu plano.</span>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <span>Execute um agente: <strong>POST /api/agents/execute</strong> com o <code>agent_id</code> e sua consulta.</span>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <span>Você receberá um e-mail em até 24h com seu token de acesso e documentação completa.</span>
+          </li>
+          <li>
+            <span class="num">4</span>
+            <span>Para suporte técnico, envie uma mensagem via WhatsApp ou e-mail abaixo.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <a href="https://engenheiro-producao-ai.onrender.com/docs" target="_blank" rel="noopener" class="btn btn-primary">
+          📖 Documentação dos Agentes
+        </a>
+        <a href="https://wa.me/5511994798464?text=Ativei+minha+assinatura+EcoSystem+AEC+via+Microsoft+Marketplace" target="_blank" rel="noopener" class="btn btn-whatsapp">
+          💬 Suporte via WhatsApp
+        </a>
+        <a href="https://global-engenharia.com" class="btn btn-outline">
+          ← Voltar ao site
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERROR STATE -->
+  <div class="card hidden" id="card-error">
+    <div class="card-header">
+      <div class="status-icon error">⚠️</div>
+      <h1>Problema na Ativação</h1>
+      <p id="error-msg">Houve um problema ao ativar sua assinatura. Nossa equipe foi notificada.</p>
+    </div>
+    <div class="card-body">
+      <div class="access-section">
+        <h2>O que fazer agora?</h2>
+        <ul class="steps">
+          <li><span class="num">1</span><span>Entre em contato via WhatsApp informando que veio do Microsoft Marketplace.</span></li>
+          <li><span class="num">2</span><span>Envie um e-mail para <strong>contato@global-engenharia.com</strong> com o assunto "Ativação EcoSystem".</span></li>
+          <li><span class="num">3</span><span>Nossa equipe ativará sua conta manualmente em até 2 horas úteis.</span></li>
+        </ul>
+      </div>
+      <div class="actions">
+        <a href="https://wa.me/5511994798464?text=Problema+ativacao+EcoSystem+AEC+Microsoft+Marketplace" target="_blank" rel="noopener" class="btn btn-whatsapp">
+          💬 Falar com Suporte
+        </a>
+        <a href="mailto:contato@global-engenharia.com?subject=Ativação EcoSystem AEC" class="btn btn-outline">
+          ✉️ Enviar e-mail
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOADING STATE (default) -->
+  <div class="card" id="card-loading">
+    <div class="card-header">
+      <div class="status-icon loading">⏳</div>
+      <h1>Processando Ativação…</h1>
+      <p>Aguarde enquanto configuramos seu acesso ao EcoSystem AEC + Regulatory.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Global Match Engenharia de Produção — CREA-SP 5071200171
+  &nbsp;|&nbsp; <a href="https://global-engenharia.com/alias-privacidade.html" style="color:inherit">Privacidade</a>
+  &nbsp;|&nbsp; <a href="https://global-engenharia.com/alias-termos.html" style="color:inherit">Termos</a>
+</footer>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var activated = params.get('activated');
+  var msError   = params.get('ms_error');
+  var plan      = params.get('plan') || '';
+  var email     = params.get('email') || '';
+  var sub       = params.get('sub') || '';
+
+  var loading = document.getElementById('card-loading');
+  var success = document.getElementById('card-success');
+  var error   = document.getElementById('card-error');
+
+  var PLAN_NAMES = {
+    'compliance_essencial':  'Compliance Essencial (27 agentes)',
+    'compliance_profissional': 'Compliance Profissional',
+    'full_suite':            'Full Suite (78 agentes)',
+    'microsoft_pack':        'Microsoft Pack',
+  };
+
+  if (activated === 'true') {
+    loading.classList.add('hidden');
+    success.classList.remove('hidden');
+
+    var grid = document.getElementById('info-grid');
+    var items = [
+      { label: 'Plano', value: PLAN_NAMES[plan] || plan || 'EcoSystem AEC' },
+      { label: 'Status', value: '✅ Ativo' },
+    ];
+    if (email) items.push({ label: 'E-mail', value: email });
+    if (sub)   items.push({ label: 'ID da Assinatura', value: sub });
+
+    items.forEach(function (item) {
+      var el = document.createElement('div');
+      el.className = 'info-item';
+      el.innerHTML = '<div class="label">' + item.label + '</div><div class="value">' + item.value + '</div>';
+      grid.appendChild(el);
+    });
+
+  } else if (msError) {
+    loading.classList.add('hidden');
+    error.classList.remove('hidden');
+
+    var msgs = {
+      missing_token:     'Token da Microsoft não encontrado. Volte ao Marketplace e tente novamente.',
+      activation_failed: 'Falha ao confirmar a assinatura com a Microsoft. Nossa equipe já foi notificada.',
+    };
+    var msgEl = document.getElementById('error-msg');
+    msgEl.textContent = msgs[msError] || 'Erro inesperado durante a ativação.';
+
+  } else {
+    // No params — direct visit, show generic info
+    loading.classList.add('hidden');
+    success.classList.remove('hidden');
+    document.querySelector('#card-success .card-header h1').textContent = 'EcoSystem AEC + Regulatory';
+    document.querySelector('#card-success .card-header p').textContent =
+      '71 agentes de IA para Engenharia, AEC e Compliance Regulatório. Disponível no Microsoft Marketplace.';
+    document.getElementById('info-grid').remove();
+  }
+})();
+</script>
+</body>
+</html>

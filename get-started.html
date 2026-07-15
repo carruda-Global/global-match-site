@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJDE7HM3YY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-ZJDE7HM3YY");
+  gtag("config", "G-V13C09C3DT");
+  gtag("config", "GT-NS8RCR9L");
+</script>
+
+<!-- Google Ads conversion: page view = customer completed checkout and
+     reached onboarding. Fires automatically on load, no click needed. -->
+<script>
+  window.addEventListener("load", function () {
+    if (typeof gtag === "function") {
+      gtag("event", "conversion", {
+        "send_to": "AW-18167532524/jZeMCNTYzMwcEOyX-tZD",
+        "value": 1.0,
+        "currency": "BRL",
+      });
+    }
+  });
+</script>
+
+<!-- Visitor identification (reverse-IP -> company) for SDR lead monitoring -->
+<script>
+fetch("https://engenheiro-producao-ai.onrender.com/api/visitor-id/track",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({page:location.pathname})}).catch(function(){});
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Set Up Your AI Voice Receptionist | Global Match</title>
+<meta name="description" content="Activate your AI Voice Receptionist — enter your business info and your dedicated phone number goes live in minutes.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://global-engenharia.com/ecosystem/callreception/get-started">
+<link rel="icon" type="image/webp" href="assets/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+:root{
+  --ink:#0C1322; --ink-2:#374151; --ink-3:#6B7280;
+  --surface:#FFFFFF; --bg:#F7F8FA; --green:#00C36B; --green-dark:#009E56;
+  --green-pale:#E6FAF2; --red:#DC2626; --red-pale:#FEF2F2; --border:#E5E7EB;
+  --radius:14px; --radius-lg:20px; --shadow:0 4px 20px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;margin:0;font-size:17px}
+h1,h2{font-family:'Space Grotesk',sans-serif;line-height:1.2;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:640px;margin:0 auto;padding:56px 24px 96px}
+nav{padding:20px 24px;border-bottom:1px solid var(--border);background:var(--surface)}
+nav img{height:32px}
+.card{background:var(--surface);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:36px}
+h1{font-size:1.9rem;margin:0 0 8px}
+.sub{color:var(--ink-3);margin-bottom:32px}
+label{display:block;font-weight:600;font-size:.9rem;margin:18px 0 6px}
+input{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:10px;font-size:1rem;font-family:inherit}
+input:focus{outline:none;border-color:var(--green)}
+.btn{display:block;width:100%;background:var(--green);color:#fff;border:none;padding:16px;border-radius:10px;font-weight:700;font-size:1rem;cursor:pointer;margin-top:24px}
+.btn:hover{background:var(--green-dark)}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--border)}
+.step{display:none}
+.step.active{display:block}
+.status{margin-top:16px;padding:14px 16px;border-radius:10px;font-size:.92rem;display:none}
+.status.show{display:block}
+.status.info{background:var(--green-pale);color:var(--green-dark)}
+.status.error{background:var(--red-pale);color:var(--red)}
+.biz-preview{background:var(--bg);border-radius:10px;padding:18px;margin-top:20px;font-size:.95rem}
+.biz-preview .name{font-weight:700;font-size:1.05rem;margin-bottom:6px}
+.biz-preview .row{color:var(--ink-2);margin-top:4px}
+.result{text-align:center}
+.result .phone{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:700;color:var(--green-dark);margin:16px 0}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--green);border-radius:50%;animation:spin .7s linear infinite;margin-right:8px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<nav><a href="vendas.html"><img src="assets/logo.webp" alt="Global Match EcoSystem"></a></nav>
+<div class="wrap">
+  <div class="card">
+
+    <div id="step-email" class="step active">
+      <h1 id="email-step-title">Set up your AI Voice Receptionist</h1>
+      <p class="sub" id="email-step-sub">Already subscribed? Enter the email you used at checkout to continue.</p>
+      <label for="email">Work email</label>
+      <input type="email" id="email" placeholder="you@yourbusiness.com" required>
+      <div id="location-label-field" style="display:none">
+        <label for="location_label">Location nickname (e.g. Downtown, Westside)</label>
+        <input type="text" id="location_label" placeholder="e.g. Downtown">
+      </div>
+      <label for="bizname">Business name</label>
+      <input type="text" id="bizname" placeholder="e.g. Riverside Dental Clinic" required>
+      <label for="location">City &amp; state (helps us find the right listing)</label>
+      <input type="text" id="location" placeholder="e.g. Austin, TX">
+      <button class="btn" id="btn-lookup" onclick="lookupBusiness()">Continue →</button>
+      <div class="status" id="status-email"></div>
+    </div>
+
+    <div id="step-confirm" class="step">
+      <h1>Is this your business?</h1>
+      <p class="sub">We found this listing on Google — confirm to activate your receptionist.</p>
+      <div class="biz-preview" id="biz-preview"></div>
+      <button class="btn" id="btn-activate" onclick="activateNumber()">✓ Confirm &amp; activate</button>
+      <button class="btn btn-secondary" onclick="goToStep('step-email')">← Not right, edit info</button>
+      <div class="status" id="status-confirm"></div>
+    </div>
+
+    <div id="step-done" class="step result">
+      <h1>You're live 🎉</h1>
+      <p class="sub">Your AI receptionist is answering calls right now.</p>
+      <div class="phone" id="live-phone"></div>
+      <p class="sub" id="done-note">Forward your existing business line to this number, or start giving it out directly. Call it now to hear it in action.</p>
+      <button class="btn btn-secondary" id="btn-add-line" style="display:none" onclick="startAddLine()">+ Add another location</button>
+    </div>
+
+    <div id="step-no-license" class="step result">
+      <h1>No active subscription found</h1>
+      <p class="sub">We couldn't find an active plan for that email yet.</p>
+      <a href="vendas.html#plans" class="btn" style="text-decoration:none;display:block">View plans →</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const API_BASE = "https://engenheiro-producao-ai.onrender.com";
+let currentBusiness = null;
+let addingLine = false;
+
+function goToStep(id) {
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+function showStatus(el, msg, type) {
+  el.textContent = msg;
+  el.className = 'status show ' + type;
+}
+
+function startAddLine() {
+  addingLine = true;
+  document.getElementById('email').value = currentBusiness ? currentBusiness.email : '';
+  document.getElementById('bizname').value = '';
+  document.getElementById('location').value = '';
+  document.getElementById('location_label').value = '';
+  document.getElementById('location-label-field').style.display = 'block';
+  document.getElementById('email-step-title').textContent = 'Add another location';
+  document.getElementById('email-step-sub').textContent = 'Same account, a second phone line for another location.';
+  goToStep('step-email');
+}
+
+async function lookupBusiness() {
+  const email = document.getElementById('email').value.trim().toLowerCase();
+  const bizname = document.getElementById('bizname').value.trim();
+  const location = document.getElementById('location').value.trim();
+  const locationLabel = document.getElementById('location_label').value.trim();
+  const statusEl = document.getElementById('status-email');
+  const btn = document.getElementById('btn-lookup');
+  if (!email || !bizname) {
+    showStatus(statusEl, 'Please enter your email and business name.', 'error');
+    return;
+  }
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>Looking up your business…';
+  statusEl.className = 'status';
+  try {
+    const resp = await fetch(API_BASE + '/api/voice-agent/import-business', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({customer_email: email, business_name: bizname, location: location, location_label: locationLabel || undefined})
+    });
+    const data = await resp.json();
+    currentBusiness = {email, bizname, locationLabel, found: data.found, data};
+    if (resp.ok && data.found) {
+      const hours = (data.business_hours || []).join('<br>');
+      document.getElementById('biz-preview').innerHTML =
+        '<div class="name">' + (data.business_name || bizname) + '</div>' +
+        (data.business_address ? '<div class="row">📍 ' + data.business_address + '</div>' : '') +
+        (data.business_phone ? '<div class="row">📞 ' + data.business_phone + '</div>' : '') +
+        (hours ? '<div class="row">🕒 ' + hours + '</div>' : '');
+      goToStep('step-confirm');
+    } else {
+      // Not found (or lookup unavailable) — proceed without a preview, the
+      // receptionist still works with a generic prompt using just the name.
+      document.getElementById('biz-preview').innerHTML =
+        '<div class="name">' + bizname + '</div>' +
+        '<div class="row">We couldn\'t find a public listing — that\'s OK, we\'ll activate with just the business name.</div>';
+      goToStep('step-confirm');
+    }
+  } catch (e) {
+    showStatus(statusEl, 'Something went wrong looking up your business. Please try again.', 'error');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Continue →';
+  }
+}
+
+async function activateNumber() {
+  const statusEl = document.getElementById('status-confirm');
+  const btn = document.getElementById('btn-activate');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>Activating…';
+  try {
+    const resp = await fetch(API_BASE + '/api/voice-agent/provision', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({customer_email: currentBusiness.email, location_label: currentBusiness.locationLabel || undefined})
+    });
+    const data = await resp.json();
+    if (resp.ok && data.licensed && data.phone_number) {
+      document.getElementById('live-phone').innerHTML =
+        '<a href="tel:' + data.phone_number + '" style="color:inherit;text-decoration:none">' + data.phone_number + '</a>';
+      await maybeShowAddLine();
+      goToStep('step-done');
+    } else if (resp.ok && data.licensed === false) {
+      goToStep('step-no-license');
+    } else if (resp.status === 409 || resp.status === 403) {
+      showStatus(statusEl, data.detail || 'Could not add this line.', 'error');
+    } else {
+      showStatus(statusEl, 'Could not activate your number right now — please try again in a moment.', 'error');
+    }
+  } catch (e) {
+    showStatus(statusEl, 'Something went wrong activating your number. Please try again.', 'error');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '✓ Confirm & activate';
+  }
+}
+
+async function maybeShowAddLine() {
+  const addBtn = document.getElementById('btn-add-line');
+  try {
+    const resp = await fetch(API_BASE + '/api/voice-agent/lines/' + encodeURIComponent(currentBusiness.email));
+    const data = await resp.json();
+    addBtn.style.display = (resp.ok && data.can_add_line) ? 'block' : 'none';
+  } catch (e) {
+    addBtn.style.display = 'none';
+  }
+}
+</script>
+</body>
+</html>

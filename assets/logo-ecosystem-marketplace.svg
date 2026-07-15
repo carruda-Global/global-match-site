@@ -1,0 +1,54 @@
+<svg width="216" height="216" viewBox="0 0 216 216" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="clip"><rect width="216" height="216" rx="28"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="216" height="216" rx="28" fill="#0C1322"/>
+
+  <!-- Hexagon frame -->
+  <polygon points="108,22 180,63 180,145 108,186 36,145 36,63"
+           fill="none" stroke="#00C36B" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- Inner hexagon (subtle) -->
+  <polygon points="108,42 162,73 162,135 108,166 54,135 54,73"
+           fill="none" stroke="#00C36B" stroke-width="1" opacity="0.25" stroke-linejoin="round"/>
+
+  <!-- Node dots at hexagon vertices -->
+  <circle cx="108" cy="22"  r="5" fill="#00C36B"/>
+  <circle cx="180" cy="63"  r="5" fill="#00C36B"/>
+  <circle cx="180" cy="145" r="5" fill="#00C36B"/>
+  <circle cx="108" cy="186" r="5" fill="#00C36B"/>
+  <circle cx="36"  cy="145" r="5" fill="#00C36B"/>
+  <circle cx="36"  cy="63"  r="5" fill="#00C36B"/>
+
+  <!-- "GM" monogram -->
+  <text x="108" y="116"
+        text-anchor="middle"
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="56"
+        font-weight="700"
+        letter-spacing="-2"
+        fill="#FFFFFF">GM</text>
+
+  <!-- Green accent line -->
+  <rect x="72" y="126" width="72" height="3" rx="1.5" fill="#00C36B"/>
+
+  <!-- "ECOSYSTEM" tagline -->
+  <text x="108" y="155"
+        text-anchor="middle"
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="13"
+        font-weight="600"
+        letter-spacing="3.5"
+        fill="#00C36B">ECOSYSTEM</text>
+
+  <!-- "AEC + REGULATORY" -->
+  <text x="108" y="174"
+        text-anchor="middle"
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="9"
+        font-weight="400"
+        letter-spacing="1.5"
+        fill="rgba(255,255,255,0.45)">AEC + REGULATORY</text>
+</svg>
