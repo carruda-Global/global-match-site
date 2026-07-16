@@ -8,7 +8,7 @@ RewriteEngine On
 RewriteRule ^pgrs/?$ /pgrs.html [L]
 RewriteRule ^sobre/?$ /sobre.html [L]
 RewriteRule ^contato/?$ /contato.html [L]
-RewriteRule ^ecosystem/?$ /vendas.html [L]
+RewriteRule ^ecosystem/?$ /pmoc.html [L]
 RewriteRule ^alias/?$ /vendas.html [L]
 RewriteRule ^alias/suporte/?$ /alias-suporte.html [L]
 RewriteRule ^alias/termos/?$ /alias-termos.html [L]
@@ -25,6 +25,16 @@ RewriteRule ^ecosystem/callreception/get-started/?$ /get-started.html [L]
 RewriteRule ^ecosystem/callreception/vs-retell-ai/?$ /aion-vs-retell-ai.html [L]
 RewriteRule ^ecosystem/callreception/vs-synthflow/?$ /aion-vs-synthflow.html [L]
 RewriteRule ^ecosystem/callreception/ai-vs-answering-service/?$ /ai-receptionist-vs-answering-service.html [L]
+
+# ---- Blog (pretty URLs -> static files in /blog/) ----
+RewriteRule ^blog/?$ /blog/index.html [L]
+RewriteRule ^blog/ai-receptionist-for-small-business-guide/?$ /blog/ai-receptionist-for-small-business-guide.html [L]
+RewriteRule ^blog/ai-receptionist-cost-2026/?$ /blog/ai-receptionist-cost-2026.html [L]
+RewriteRule ^blog/signs-your-business-needs-ai-receptionist/?$ /blog/signs-your-business-needs-ai-receptionist.html [L]
+RewriteRule ^blog/ai-receptionist-faq/?$ /blog/ai-receptionist-faq.html [L]
+RewriteRule ^blog/ai-receptionist-vs-voicemail/?$ /blog/ai-receptionist-vs-voicemail.html [L]
+RewriteRule ^blog/ai-receptionist-data-security/?$ /blog/ai-receptionist-data-security.html [L]
+RewriteRule ^blog/what-industries-use-ai-receptionists/?$ /blog/what-industries-use-ai-receptionists.html [L]
 
 # ---- Reverse-proxy to the Render backend, via PHP (mod_proxy returned 503
 # on this hosting plan, so proxying is done in PHP/cURL instead) ----
