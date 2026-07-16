@@ -1,0 +1,29 @@
+# AION Voice Receptionist
+
+> AI phone receptionist that answers business calls 24/7, texts back missed calls instantly, and captures every lead automatically. $89/month flat — no per-call fee, no customer cap. Built for small businesses in dental, real estate, home services, law, salons, and medical clinics across the US, UK, Canada, and Australia.
+
+## Product
+- [Pricing & live demo](https://global-engenharia.com/ecosystem/callreception): $89/mo Starter (300 min included, $0.15/min after), $179/mo Growth (2 lines, 750 min), $59/mo per line Agency Partner (white-label, min. 5 lines).
+- [Get started](https://global-engenharia.com/get-started.html): self-service setup, live in under 20 minutes, no developer needed.
+
+## Comparisons
+- [AION vs Smith.ai](https://global-engenharia.com/aion-vs-smith-ai.html)
+- [AION vs Goodcall](https://global-engenharia.com/aion-vs-goodcall.html)
+- [AION vs Retell AI](https://global-engenharia.com/aion-vs-retell-ai.html)
+- [AION vs Synthflow](https://global-engenharia.com/aion-vs-synthflow.html)
+- [AI Receptionist vs. Answering Service](https://global-engenharia.com/ai-receptionist-vs-answering-service.html)
+- [AI Receptionist vs. Voicemail](https://global-engenharia.com/blog/ai-receptionist-vs-voicemail.html)
+
+## Guides
+- [How to Choose an AI Receptionist](https://global-engenharia.com/how-to-choose-ai-receptionist.html)
+- [The Real Cost of a Missed Call](https://global-engenharia.com/real-cost-of-a-missed-call.html)
+- [AI Receptionist for Small Business: Complete Guide](https://global-engenharia.com/blog/ai-receptionist-for-small-business-guide.html)
+- [How Much Does an AI Receptionist Cost in 2026](https://global-engenharia.com/blog/ai-receptionist-cost-2026.html)
+- [AI Receptionist FAQ](https://global-engenharia.com/blog/ai-receptionist-faq.html)
+- [How Secure Is an AI Receptionist With Customer Data](https://global-engenharia.com/blog/ai-receptionist-data-security.html)
+- [What Industries Use AI Receptionists](https://global-engenharia.com/blog/what-industries-use-ai-receptionists.html)
+
+## By industry
+- [Dental Clinics](https://global-engenharia.com/ai-receptionist-for-dental-clinics.html)
+- [Real Estate](https://global-engenharia.com/ai-receptionist-for-real-estate.html)
+- [Home Services](https://global-engenharia.com/ai-receptionist-for-home-services.html)

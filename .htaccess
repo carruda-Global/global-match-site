@@ -25,6 +25,7 @@ RewriteRule ^ecosystem/callreception/get-started/?$ /get-started.html [L]
 RewriteRule ^ecosystem/callreception/vs-retell-ai/?$ /aion-vs-retell-ai.html [L]
 RewriteRule ^ecosystem/callreception/vs-synthflow/?$ /aion-vs-synthflow.html [L]
 RewriteRule ^ecosystem/callreception/ai-vs-answering-service/?$ /ai-receptionist-vs-answering-service.html [L]
+RewriteRule ^ai-receptionist-guide/?$ /ai-receptionist-guide.html [L]
 
 # ---- Blog (pretty URLs -> static files in /blog/) ----
 RewriteRule ^blog/?$ /blog/index.html [L]

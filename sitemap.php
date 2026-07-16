@@ -21,6 +21,7 @@ $staticUrls = [
     '/blog/ai-receptionist-vs-voicemail',
     '/blog/ai-receptionist-data-security',
     '/blog/what-industries-use-ai-receptionists',
+    '/ai-receptionist-guide',
 ];
 $staticItems = [];
 foreach ($staticUrls as $path) {
