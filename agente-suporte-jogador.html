@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agente de IA para Suporte ao Jogador — Teste Piloto | Global Match</title>
+<meta name="description" content="Agente de IA que filtra tickets repetitivos de suporte a jogadores — respostas instantâneas 24/7, sua equipe foca só no que precisa de humano. Vagas piloto abertas.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" type="image/webp" href="assets/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+:root{--ink:#0C1322;--ink-2:#374151;--ink-3:#6B7280;--surface:#FFFFFF;--bg:#F7F8FA;--purple:#8B5CF6;--purple-dark:#7C3AED;--purple-pale:#F3EEFF;--border:#E5E7EB;--radius:14px;--shadow:0 4px 20px rgba(0,0,0,.08)}
+*{box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;margin:0;font-size:17px}
+h1,h2{font-family:'Space Grotesk',sans-serif;line-height:1.2;letter-spacing:-.02em}
+nav{padding:20px 24px;border-bottom:1px solid var(--border);background:var(--surface)}
+nav img{height:32px}
+.wrap{max-width:760px;margin:0 auto;padding:56px 24px 96px}
+.badge{display:inline-block;background:var(--purple-pale);color:var(--purple-dark);font-size:.8rem;font-weight:700;padding:6px 14px;border-radius:20px;margin-bottom:16px}
+h1{font-size:2.2rem;margin:0 0 12px}
+.sub{color:var(--ink-3);font-size:1.15rem;margin-bottom:32px}
+.stat-box{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-bottom:32px;font-size:.95rem;color:var(--ink-2)}
+.stat-box b{color:var(--purple-dark)}
+.feats{list-style:none;padding:0;margin:0 0 40px}
+.feats li{padding:12px 0;border-bottom:1px solid var(--border);color:var(--ink-2)}
+.feats li:before{content:"✓ ";color:var(--purple-dark);font-weight:700}
+.pilot-box{background:var(--ink);color:#fff;border-radius:var(--radius);padding:32px;margin-bottom:32px}
+.pilot-box h2{color:#fff;font-size:1.4rem;margin:0 0 8px}
+.pilot-box p{color:rgba(255,255,255,.7);margin:0 0 20px}
+form{display:flex;flex-direction:column;gap:12px}
+input,textarea{padding:14px;border:1px solid var(--border);border-radius:10px;font-size:1rem;font-family:inherit}
+button{background:var(--purple);color:#fff;border:none;padding:16px;border-radius:10px;font-weight:700;font-size:1rem;cursor:pointer}
+button:hover{background:var(--purple-dark)}
+.disclaimer{font-size:.85rem;color:var(--ink-3);margin-top:24px}
+</style>
+</head>
+<body>
+<nav><a href="vendas.html"><img src="assets/logo.webp" alt="Global Match EcoSystem"></a></nav>
+<div class="wrap">
+  <div class="badge">🎮 TESTE PILOTO — VAGAS LIMITADAS</div>
+  <h1>Agente de IA para Suporte ao Jogador</h1>
+  <p class="sub">Filtra tickets repetitivos automaticamente — sua equipe foca só no que precisa de julgamento humano.</p>
+
+  <div class="stat-box">
+    O mercado de suporte com IA já é validado: o <b>Fin (Intercom)</b> tem 7.000+ clientes, 67% de taxa média de resolução automática, e é usado pela <b>Hi-Rez Studios</b> (SMITE, Paladins) pra filtrar milhares de tickets/mês.
+  </div>
+
+  <h2>O que o agente faz</h2>
+  <ul class="feats">
+    <li>Responde perguntas repetitivas 24/7 (recuperação de conta, status de compra, regras do jogo)</li>
+    <li>Escalona pra equipe humana automaticamente quando não consegue resolver</li>
+    <li>Integração com Discord — onde seus jogadores já estão</li>
+    <li>Setup simples, sem precisar reescrever seu fluxo de suporte atual</li>
+  </ul>
+
+  <div class="pilot-box">
+    <h2>Piloto pago, com desconto</h2>
+    <p>Buscando 3-5 estúdios pra validar o agente com dados reais. Preço reduzido durante o piloto, sem contrato longo.</p>
+    <form id="pilot-form">
+      <input type="text" id="p-name" placeholder="Seu nome" required>
+      <input type="text" id="p-studio" placeholder="Nome do estúdio" required>
+      <input type="email" id="p-email" placeholder="E-mail" required>
+      <textarea id="p-volume" placeholder="Quantos tickets de suporte vocês recebem por mês? (estimativa)" rows="2"></textarea>
+      <button type="submit">Quero participar do piloto</button>
+    </form>
+    <div id="pilot-status" style="margin-top:12px;font-size:.9rem"></div>
+  </div>
+
+  <p class="disclaimer">Página de validação — o agente está em fase de teste com estúdios reais antes do lançamento completo. Dados usados só pra contato sobre o piloto.</p>
+</div>
+<script>
+document.getElementById('pilot-form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const status = document.getElementById('pilot-status');
+  const name = document.getElementById('p-name').value.trim();
+  const studio = document.getElementById('p-studio').value.trim();
+  const email = document.getElementById('p-email').value.trim();
+  const volume = document.getElementById('p-volume').value.trim();
+  status.textContent = 'Enviando...';
+  status.style.color = '#6B7280';
+  try {
+    const resp = await fetch('https://engenheiro-producao-ai.onrender.com/checkout/lead', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: email,
+        name: name + ' | Estúdio: ' + studio + ' | Volume: ' + (volume || 'não informado'),
+        plan_id: 'agente_suporte_jogador_piloto',
+        page: '/agente-suporte-jogador',
+        source: 'pilot_test'
+      })
+    });
+    if (!resp.ok) throw new Error('fail');
+    status.textContent = 'Recebido! Entraremos em contato em breve.';
+    status.style.color = '#8B5CF6';
+  } catch (err) {
+    status.textContent = 'Não foi possível enviar agora — tente de novo em instantes.';
+    status.style.color = '#DC2626';
+  }
+});
+</script>
+</body>
+</html>
