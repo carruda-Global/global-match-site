@@ -22,6 +22,7 @@
 - [AI Receptionist FAQ](https://global-engenharia.com/blog/ai-receptionist-faq.html)
 - [How Secure Is an AI Receptionist With Customer Data](https://global-engenharia.com/blog/ai-receptionist-data-security.html)
 - [What Industries Use AI Receptionists](https://global-engenharia.com/blog/what-industries-use-ai-receptionists.html)
+- [Full blog (40+ buyer-question posts)](https://global-engenharia.com/blog): setup, pricing, escalation, industries, and every common buyer question answered directly.
 
 ## By industry
 - [Dental Clinics](https://global-engenharia.com/ai-receptionist-for-dental-clinics.html)
