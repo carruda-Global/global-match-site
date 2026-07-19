@@ -12,6 +12,11 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.global-engenharia\.com$ [NC]
 RewriteRule ^(.*)$ https://global-engenharia.com/$1 [L,R=301]
 
+# ---- HSTS (Semrush "subdomains don't support HSTS" finding, 2026-07-19) ----
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
 # ---- Same-origin page rewrites (Netlify status=200 = rewrite, not redirect) ----
 RewriteRule ^pgrs/?$ /pgrs.html [L]
 RewriteRule ^sobre/?$ /sobre.html [L]
