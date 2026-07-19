@@ -4,6 +4,14 @@
 
 RewriteEngine On
 
+# ---- Canonical host: force www -> non-www (Semrush "duplicate title/content"
+# finding, confirmed 2026-07-19: both hosts served identical pages with no
+# redirect, e.g. www.global-engenharia.com/alias-termos.html and
+# global-engenharia.com/alias-termos.html both 200). All canonical tags and
+# the sitemap already use the non-www host, so that's the one kept live. ----
+RewriteCond %{HTTP_HOST} ^www\.global-engenharia\.com$ [NC]
+RewriteRule ^(.*)$ https://global-engenharia.com/$1 [L,R=301]
+
 # ---- Same-origin page rewrites (Netlify status=200 = rewrite, not redirect) ----
 RewriteRule ^pgrs/?$ /pgrs.html [L]
 RewriteRule ^sobre/?$ /sobre.html [L]
